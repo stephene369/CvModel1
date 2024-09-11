@@ -307,6 +307,15 @@ body {
     background: #f0f0f091;
 }
 
+.skills .box .percent div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+
 .interest ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -364,8 +373,9 @@ body {
 @media print {
     @page {
         scale: 30;
-        size: A4 portrait;
+        size: A4;
         margin: var(--margin-print);
+
     }
     #resume {
         min-width: var(--w);
