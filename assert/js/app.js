@@ -874,23 +874,15 @@ function addHoverMessage(id) {
 
     // Crée un élément h6 avec le message
     const message = document.createElement('h6');
-    message.style.color = 'red';
+    message.style.color = 'rgba(255, 2, 2, 0.65)';
     message.textContent = 'Click to make disappear this section on the CV';
-    message.style.display = 'none'; // Le message est caché par défaut
+    message.style.display = 'block'; // Le message est caché par défaut
     message.style.whiteSpace = 'nowrap';
 
     // Ajoute le message en tant qu'enfant de l'élément
     element.appendChild(message);
 
-    // Affiche le message lorsque la souris passe sur l'élément
-    element.addEventListener('mouseover', () => {
-        message.style.display = 'block';
-    });
 
-    // Cache le message lorsque la souris quitte l'élément
-    element.addEventListener('mouseout', () => {
-        message.style.display = 'none';
-    });
 }
 
 addHoverMessage("educationBtn");
