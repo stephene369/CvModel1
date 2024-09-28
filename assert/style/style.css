@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 :root {
     --font-size-base: 1rem;
     --spacing-xsmall: 0.3125rem;
@@ -61,7 +64,7 @@
     margin-top: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poppins', sans-serif;
     transition: all 0.5s ease-in-out;
 }
 
@@ -85,7 +88,7 @@
     background-color: #0056b3;
 }
 
-main{
+main {
     display: flex;
     justify-content: space-around;
     align-items: start;
@@ -97,13 +100,13 @@ body {
     background-color: var(--bd-color);
 }
 
-.container, 
+.container,
 .container-2 {
     position: relative;
     margin-top: var(--spacing-xlarge);
     margin-bottom: var(--spacing-xlarge);
     background: #fff;
-    box-shadow: 0 2.1875rem 3.4375rem rgba(0,0,0,0.1);
+    box-shadow: 0 2.1875rem 3.4375rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -127,7 +130,8 @@ body {
     display: grid;
 }
 
-.container .left_side, .container .right_side {
+.container .left_side,
+.container .right_side {
     position: relative;
     padding: 0 0.625rem 2.5rem 0.9375rem;
 }
@@ -146,7 +150,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: var(--spacing-medium);
-    border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
 
 .profileText .img8x {
@@ -217,6 +221,7 @@ body {
     font-size: var(--font-size-icon);
     color: #03a9fa;
 }
+
 .contactInfo ul li span {
     color: #fff;
     font-weight: 300;
@@ -242,6 +247,7 @@ body {
     color: white;
     font-weight: 200;
 }
+
 .contactInfo.language .percent div {
     position: absolute;
     top: 0;
@@ -249,6 +255,7 @@ body {
     height: 100%;
     background: #03a9f4;
 }
+
 .contactInfo.language .percent {
     position: relative;
     width: 100%;
@@ -257,10 +264,12 @@ body {
     margin-top: var(--margin-top-percent);
     display: block;
 }
+
 .contactInfo.education h4 {
     color: white;
     font-weight: 200;
 }
+
 .about {
     margin-top: var(--margin-top-about);
 }
@@ -385,36 +394,44 @@ body {
         margin: var(--margin-print);
 
     }
-    footer{
+
+    footer {
         display: none;
     }
+
     #resume {
         min-width: var(--w);
         min-height: var(--h);
         max-width: var(--w);
     }
+
     #downloadBtn {
         display: none;
     }
+
     #backButton {
         display: none;
     }
+
     .container-2 {
         display: none;
     }
+
     :root {
         --bd-color: white;
         --spacing-xlarge: 2rem;
     }
+
     .container {
         padding: 0;
         margin: 0;
     }
+
     .bd-container {
         padding: 0;
         margin: 0;
     }
-    
+
 }
 
 .container-2 {

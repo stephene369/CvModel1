@@ -97,8 +97,6 @@
     display: flex; /* flex */
     align-items: center; /* items-center */
     justify-content: center; /* justify-center */
-    max-height: 100%; /* h-full */
-
 }
 
 .input-group  button:hover ,
@@ -195,8 +193,6 @@
     display: flex; /* flex */
     width: 100%; /* w-full */
     flex-direction: column;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     border-top: 0.1rem solid #576cbb6b;
 }
 .add-section .r-group{
@@ -208,8 +204,8 @@
 .add-section .r-group button{
     display: flex;
     flex-grow: 1; /* flex-grow */
-    padding-top: 0.75rem; /* py-3 (padding-top) */
-    padding-bottom: 0.75rem; /* py-3 (padding-bottom) */
+    padding-top: 0.5rem; /* py-3 (padding-top) */
+    padding-bottom: 0.5rem; /* py-3 (padding-bottom) */
     text-align: left; /* text-start */
     overflow: hidden; /* overflow-hidden */
     border-radius: 0.25rem; /* rounded */
@@ -234,8 +230,8 @@
 
 .add-section .r-group .hider{
     display: none;
-    transform: 1s;
-    transform: 1s;
+    transform: 0.5s;
+    transform: .5s;
 }
 
 .add-section .r-group button i {
