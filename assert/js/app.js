@@ -210,12 +210,14 @@ autoWritingId("profileIp", "profileIp_")
 autoWritingId("descriptionIp", "descriptionIp_")
 
 
+
 function hideElement(elementId, buttonId, isVisible) {
     const element = document.getElementById(elementId);
     const button = document.getElementById(buttonId);
 
     button.addEventListener('click', function () {
         if (isVisible) {
+            
             element.style.display = 'none';
             button.className = "bx bx-chevron-down";
             button.style.color = 'red'; // Mettre la couleur en rouge quand c'est "down"
@@ -365,8 +367,8 @@ function createInputDivLanguages() {
     const lab1 = document.createElement('label');
     const lab2 = document.createElement('label');
 
-    lab1.textContent = 'Language'
-    lab2.textContent = 'Rate'
+    lab1.textContent = 'Language ex: (English)'
+    lab2.textContent = 'Rate (Level in the language ) Ex : 90'
 
     const input1 = document.createElement('input');
     const input2 = document.createElement('input');
@@ -484,19 +486,19 @@ function createInputDivExperiences() {
     DIV.className = "input-group"
 
     // Création des éléments pour Year
-    const yearLab = createLabelDiv("Year: from-to");
+    const yearLab = createLabelDiv("Year (From when to when you worked) ex: (2018-2020)");
     const [yearDiv, yearInput] = createInput();
 
     // Création des éléments pour Description
-    const descriptionLab = createLabelDiv("Description");
+    const descriptionLab = createLabelDiv("Description (Describe your work experience)");
     const [descriptionDiv, descriptionInput] = createInputTextArea();
 
     // Création des éléments pour Profile
-    const profileLab = createLabelDiv("Profile");
+    const profileLab = createLabelDiv("Profile (Your profile name in the firm) Ex: Software Engineer");
     const [profileDiv, profileInput] = createInput();
 
     // Création des éléments pour Firm
-    const firmLab = createLabelDiv("Firm");
+    const firmLab = createLabelDiv("Firm (Firm name) Ex: Google");
     const [firmDiv, firmInput] = createInput();
 
     const button = document.createElement('button');
@@ -601,9 +603,9 @@ function createInputDivSkills() {
     const lab1 = document.createElement('label');
     const lab2 = document.createElement('label');
 
-    lab1.textContent = 'Skill'
-    lab2.textContent = 'Rate'
-
+    lab1.textContent = 'Skill (Name of the skill)';
+    lab2.textContent = 'Rate (Proficiency level from 1 to 100)'
+    
     const input1 = document.createElement('input');
     const input2 = document.createElement('input');
 
@@ -710,6 +712,10 @@ function createInputDivCertificates() {
     fileInput_.type = 'file'
     fileInput_.accept = "image/*"
     img.className = "certifImg"
+    span = document.createElement("span");
+    span.textContent = "badge-image";
+    span.style.display = "block";
+    span.style.whiteSpace = "nowrap";
 
     fileInput_.addEventListener('change', (event) => {
         const file = event.target.files[0];
@@ -730,6 +736,7 @@ function createInputDivCertificates() {
     button.addEventListener('click', () => {
         fileInput_.click()
     })
+    DIV.appendChild(span)
     DIV2.appendChild(img);
 
 
@@ -817,18 +824,18 @@ function hideSection(buttonID, sectionID) {
 
     button.addEventListener('click', function () {
         if (IsVisibility[sectionID]) {
-            section.style.display = 'none';
-            //button.classList.remove('viewSection') ;
-            //button.classList.add('hideSection');
+            if (confirm("Are you sure you want to hide this section?")) {
+                section.style.display = 'none';
+                IsVisibility[sectionID] = false;
+            }
         } else {
             section.style.display = 'block';
-            //button.classList.remove('hideSection');
-            //button.classList.add('viewSection');
+            IsVisibility[sectionID] = true;
         }
-
-        IsVisibility[sectionID] = !IsVisibility[sectionID];
     });
 }
+
+
 
 // Exemples d'utilisation
 hideSection('educationBtn', 'educationSection');
@@ -972,6 +979,10 @@ function handleCheckbox(size) {
             let smallValue;
             if (variable === '--padding-contactInfo') {
                 smallValue = (numericValue * 0.3).toFixed(4) + unit;
+            } else if (variable === '--margin-box') {
+                smallValue = (numericValue * 0.2).toFixed(4) + unit;
+            }else if(variable === "--margin-top-about"){
+                smallValue = (numericValue * 0.2).toFixed(4) + unit;
             } else {
                 smallValue = (numericValue * 0.8).toFixed(4) + unit;
             }
