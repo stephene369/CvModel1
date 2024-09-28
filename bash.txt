@@ -1,0 +1,1 @@
+recordmydesktop --windowid=0x5200004 --no-sound --overwrite --output=input

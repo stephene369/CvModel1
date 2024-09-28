@@ -1,32 +1,32 @@
 document.body.style.zoom = "100%";
 
-document.addEventListener('contextmenu', event => event.preventDefault());
-document.addEventListener("keydown", function (e) {
-    // Empêcher Ctrl+S ou Cmd+S
-    if (e.key === 's' && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        e.preventDefault();
-    }
+// document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener("keydown", function (e) {
+//     // Empêcher Ctrl+S ou Cmd+S
+//     if (e.key === 's' && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+//         e.preventDefault();
+//     }
 
-    // Empêcher F12
-    if (e.key === 'F12' || e.keyCode === 123) {
-        e.preventDefault();
-    }
+//     // Empêcher F12
+//     if (e.key === 'F12' || e.keyCode === 123) {
+//         e.preventDefault();
+//     }
 
-    // Empêcher Ctrl+Shift+I ou Cmd+Option+I (autre raccourci pour les outils de développement)
-    if ((e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.altKey && e.key === 'i')) {
-        e.preventDefault();
-    }
+//     // Empêcher Ctrl+Shift+I ou Cmd+Option+I (autre raccourci pour les outils de développement)
+//     if ((e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.altKey && e.key === 'i')) {
+//         e.preventDefault();
+//     }
 
-    // Empêcher Ctrl+U ou Cmd+U (afficher le code source)
-    if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
-        e.preventDefault();
-    }
+//     // Empêcher Ctrl+U ou Cmd+U (afficher le code source)
+//     if ((e.ctrlKey && e.key === 'u') || (e.metaKey && e.key === 'u')) {
+//         e.preventDefault();
+//     }
 
-    // Empêcher Ctrl+P ou Cmd+P
-    if ((e.ctrlKey && e.key === 'p') || (e.metaKey && e.key === 'p')) {
-        e.preventDefault();
-    }
-}, false);
+//     // Empêcher Ctrl+P ou Cmd+P
+//     if ((e.ctrlKey && e.key === 'p') || (e.metaKey && e.key === 'p')) {
+//         e.preventDefault();
+//     }
+// }, false);
 
 
 function googleTranslateElementInit() {
